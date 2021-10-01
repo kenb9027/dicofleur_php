@@ -1,0 +1,123 @@
+<div id="pagination-box" class="row">
+    <div id="pagination-prec-box" class="col-4">
+        <?php
+        if (($page - 1) >
+            0
+        ) { ?>
+            <a href="?page=<?= $page - 1; ?>">Précédente</a>
+            <!-- <p id="page-prec">Précédent</p> -->
+        <?php } ?>
+    </div>
+    <div id="pagination-page-box" class="col-4">
+        <?php
+
+        if (
+            $nbPages >
+            5
+        ) {
+            $nbPagesAnte = $nbPages - 1;
+            $pagePrec = $page - 1;
+            $pageSuiv = $page + 1;
+
+            $active = "";
+            if ($page == 1) {
+                $active = "page-links-active";
+            }
+            echo '<a class="page-links ' . $active . '" href="?page=1"> 1 </a> ';
+            if (
+                $page
+                != 1 && $page != 2 && $page != 3
+            ) {
+                echo '<span class="page-links-dots"
+      >...</span
+    >';
+            }
+            if ($pagePrec > 1) {
+                echo '<a
+      class="page-links"
+      href="?page=' . $pagePrec . '"
+    >
+      ' . $pagePrec . '
+    </a>
+    ';
+            }
+            if ($page != 1 && $page != $nbPages) {
+                echo '<a
+      class="page-links page-links-active"
+      href="?page=$page"
+    >
+      ' . $page . '
+    </a>
+    ';
+            }
+            if ($pageSuiv < $nbPages) {
+                echo '<a
+      class="page-links"
+      href="?page=' . $pageSuiv . '"
+    >
+      ' . $pageSuiv . '
+    </a>
+    ';
+            }
+            if (
+                $page != $nbPagesAnte && $page != ($nbPagesAnte - 1) && $page !=
+                $nbPages
+            ) {
+                echo '<span class="page-links-dots">...</span>';
+            }
+            $active = "";
+            if ($page == $nbPages) {
+                $active = "page-links-active";
+            }
+            echo '<a class="page-links ' . $active . '" href="?page=' . $nbPages . '">
+      ' . $nbPages . '
+    </a>
+    ';
+        } elseif ($nbPages > 1 && $nbPages <= 5) {
+            for ($i = 1; $i <= $nbPages; $i++) {
+                $active = "";
+                if ($page == $i) {
+                    $active = "page-links-active";
+                }
+                echo '<a
+      class="page-links ' . $active . '"
+      href="?page=' . $i . '"
+    >
+      ' . $i . '
+    </a>
+    ';
+            }
+        } else {
+            echo '';
+        } ?>
+    </div>
+    <div id="pagination-suiv-box" class="col-4">
+        <?php
+        if (($page + 1) <= $nbPages) { ?>
+            <a href="?page=<?= $page + 1; ?>">Suivante</a>
+            <!-- <p id="page-suiv">Suivant</p> -->
+        <?php } ?>
+    </div>
+
+    <input type="hidden" name="page-page" id="page-page" value="<?= $page ?>" />
+
+    <div id="pagination-form-box" class="col-12">
+        <label id="pagination-form-text">
+            Changer le nombre de plantes à afficher sur la page :
+        </label>
+        <form class="form-inline" for="pagination-form-number" action="?page=1" method="post">
+
+            <select class="form-control" id="limit" name="limit">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+            </select>
+
+            <input id="pagination-form-submit" type="submit" value="Valider" />
+        </form>
+    </div>
+</div>

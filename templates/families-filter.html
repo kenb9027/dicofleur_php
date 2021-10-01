@@ -1,0 +1,30 @@
+<div class="container">
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <h5 class="families-title">
+                Les familles présentent sur DicoFleur 
+            </h5>
+        </div>
+    
+<?php
+
+foreach ($families as $family) {
+    echo '
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2 familyform">
+            <form id="familyform-' . $family['family'] . '" action="./list-filter" method="POST">
+                <div class="addformgroup">
+                    <input type="hidden" name="family" id="family-' . $family['family'] . '" value="'. $family['family'] .'" />
+                    <input type="hidden" name="name" id="name' . $family['family'] . '" value="" />
+                    <input type="hidden" name="specie" id="specie-' . $family['family'] . '" value="" />
+                    <input type="submit" value="' . $family['family'] . '" />
+                </div>
+            </form>
+        </div>
+    ';
+}
+?>
+    </div>
+</div>

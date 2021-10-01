@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="form-title">Souhaitez vous vraiment supprimer</h2>
+  <h2 class="form-title">
+    <?= ucfirst($plant['name']) ?>
+    ?
+  </h2>
+  <p class="form-subtitle">Attention, cette action est irréversible</p>
+
+  <div class="row">
+    <a
+      class="del-confirm col-12 col-sm-4"
+      href="./src/controllers/deleteplant.php?id=<?= $plant['id'] ?>"
+    >
+      Supprimer
+      <?= ucfirst($plant['name']) ?>
+    </a>
+    <a class="del-back col-12 col-sm-4" href="./single?id=<?= $plant['id'] ?>">
+      Retour à la plante
+    </a>
+    <a class="del-back col-12 col-sm-4" href="./index"> Retour à l'accueil </a>
+  </div>
+</div>

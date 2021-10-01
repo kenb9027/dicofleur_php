@@ -1,0 +1,21 @@
+<div class="card d-block w-100">
+
+  <div class="carrou-card-img-box">
+    <?php $plantImg = $plant['picture'] ;?>
+    <a href="./single?id=<?php echo $plant['id'] ?>">
+      <div
+        class="carrou-card-img"
+        style="
+          background: url('./public/img/<?= $plantImg ?>');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="card-last-title-box">
+          <h4 class="card-last-title"><?php echo ucfirst($plant['name']) ?></h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

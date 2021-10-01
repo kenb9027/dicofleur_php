@@ -1,0 +1,36 @@
+<div id="welcome-box">
+  <div id="welcome-img" class="game-welcome-img">
+    <div class="results-titles-box">
+      <h2>Ton score est de</h2>
+      <h2>
+        <?= $_SESSION['score'] ?>
+        /
+        <?= ($_SESSION['size']*3) ?>
+      </h2>
+      <h3>
+        <span>Noms: </span>
+        <?= $_SESSION['nameScore'] ?>
+        /
+        <?= ($_SESSION['size']) ?>
+      </h3>
+      <h3>
+        <span>Espèces: </span>
+        <?= $_SESSION['specieScore'] ?>
+        /
+        <?= ($_SESSION['size']) ?>
+      </h3>
+      <h3>
+        <span>Familles: </span>
+        <?= $_SESSION['familyScore'] ?>
+        /
+        <?= ($_SESSION['size']) ?>
+      </h3>
+      <h3>
+        <a class="newgame-link" href="./game-form-gamesize"> Rejouer ? </a>
+      </h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <?php include('./templates/game-results-list.html'); ?>
+</div>

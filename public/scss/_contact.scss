@@ -1,0 +1,35 @@
+.contact-title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-title {
+    color: var(--color-alt-dark);
+    font-family: var(--ff-primary);
+    font-weight: bold;
+  }
+  .contact-link {
+    color: #fff;
+    background-color: var(--color-dark);
+    font-family: var(--ff-secondary);
+    font-weight: bold;
+    border-radius: 3px;
+    border: var(--color-dark) 2px solid;
+    padding: 8px;
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-dark);
+      background-color: #fff;
+    }
+  }
+
+  .contact-credits {
+    color: var(--color-alt-dark);
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    margin-top: 50px;
+  }
+}

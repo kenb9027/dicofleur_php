@@ -1,0 +1,32 @@
+<div class="col-12 col-md-6">
+  <div
+    data-aos="flip-right"
+    data-aos-duration="1200"
+    data-aos-delay="100"
+    class="results-card"
+  >
+    <a href="./single?id=<?php echo $plantId ?>">
+      <div class="row">
+        <div class="col-12 col-sm-6 gameform-result-img-box">
+          <div
+            class="gameform-result-img"
+            style="
+              background: url('./public/img/<?= $plantImg ?>');
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              border-radius: 8px;
+            "
+          ></div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="gameform-answers">
+            <p class="<?= $resName ?>"><?= $plantName ?></p>
+            <p class="<?= $resSpecie ?>"><?= $plantSpecie ?></p>
+            <p class="<?= $resFamily ?>"><?= $plantFamily ?></p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

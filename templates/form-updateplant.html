@@ -1,0 +1,66 @@
+<div class="container">
+
+  <div id="upd-last-pict">
+    <img
+      src="./public/img/<?= htmlspecialchars($plant['picture']) ?>"
+      alt="image de la plante"
+    />
+  </div>
+  <form
+    id="addform"
+    action="./src/controllers/updateplant.php"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <input type="hidden" name="id" value="<?= $id ?>" />
+    <div class="addformgroup">
+      <label for="name">Nom</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="<?= htmlspecialchars($plant['name']) ?>"
+      />
+    </div>
+    <div class="addformgroup">
+      <label for="specie">Espèce</label>
+      <input
+        type="text"
+        id="specie"
+        name="specie"
+        value="<?= htmlspecialchars($plant['specie']) ?>"
+      />
+    </div>
+    <div class="addformgroup">
+      <label for="family">Famille</label>
+      <input
+        type="text"
+        id="family"
+        name="family"
+        value="<?= htmlspecialchars($plant['family']) ?>"
+      />
+    </div>
+    <div class="addformgroup">
+      <label for="description">Description</label>
+      <textarea
+        type="text"
+        id="description"
+        name="description"
+        cols="30"
+        rows="10"
+      >
+<?= htmlspecialchars($plant['description']) ?></textarea
+      >
+    </div>
+    <div class="addformgroup">
+      <label class="add-lab-img" for="picture">Image</label>
+      <input type="file" id="picture" name="picture" />
+      <input
+        type="hidden"
+        name="expicture"
+        value="<?= htmlspecialchars($plant['picture']) ?>"
+      />
+    </div>
+    <input type="submit" value="Modifier cette plante" />
+  </form>
+</div>

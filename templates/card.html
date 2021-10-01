@@ -1,0 +1,50 @@
+<div class="col-12 col-sm-6 col-md-4 card-box">
+  <div
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-delay="200"
+    class="card"
+  >
+    <div class="card-title-box">
+      <a href="./single?id=<?php echo $plant['id'] ?>">
+        <h4 class="card-title">
+          <?php echo ucfirst($plant['name']) ?>
+        </h4>
+      </a>
+    </div>
+    <div class="card-img-box">
+      <?php $plantImg = $plant['picture'] ;?>
+      <a href="./single?id=<?php echo $plant['id'] ?>">
+        <div
+          class="card-img"
+          style="
+            background: url('./public/img/<?= $plantImg ?>');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+      </a>
+    </div>
+    <div class="card-infos-box">
+      <div class="card-infos-names">
+        <div class="row">
+          <p class=" col-4  card-label">Nom:</p>
+          <p class=" col-8 "><?php echo ucfirst($plant['name']) ?></p>
+        </div>
+        <div class="row">
+          <p class=" col-4  card-label">Espèce:</p>
+          <p class=" col-8 "><?php echo ucfirst($plant['specie']) ?></p>
+        </div>
+        <div class="row">
+          <p class=" col-4  card-label">Famille:</p>
+          <p class=" col-8 "><?php echo ucfirst($plant['family']) ?></p>
+        </div>
+      </div>
+      <div class="card-infos-others row">
+        <p class="col-12 card-label">Description:</p>
+        <p class="col-12"><?php echo ucfirst($plant['description']) ?></p>
+      </div>
+    </div>
+  </div>
+</div>

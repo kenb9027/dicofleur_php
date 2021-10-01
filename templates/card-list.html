@@ -1,0 +1,20 @@
+<div class="container">
+
+    <div class="row">
+      <?php
+      $nb = count($cards);
+
+      foreach ($cards as $plant) {
+        include('./templates/card.html');
+      };
+
+      if ($nb === 0) {
+        include('./templates/no-results.html');
+      }
+      ?>
+    </div>
+
+  <?php
+  require_once('./templates/pagination-links.html');
+  ?>
+</div>

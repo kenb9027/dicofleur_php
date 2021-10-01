@@ -1,0 +1,30 @@
+<div class="container">
+  <h4 data-aos="fade-up" data-aos-duration="1200" id="game-index-title">
+    Entrainez-vous en vous amusant ...
+  </h4>
+
+  <div id="game-index-box">
+    <div class="row">
+      <?php 
+         for ($i=0; $i < $size; $i++) { 
+            $plant = $plants[$i] ;
+            require('./templates/game-card.html');
+        }
+         ?>
+    </div>
+  </div>
+
+  <h4 data-aos="fade-up" data-aos-duration="1200" id="test-index-title">
+    ... puis passez l'évaluation et constatez vos progrès !
+  </h4>
+  <div id="test-index-box" class="row">
+    <div class="col-12 col-sm-6">
+      <a id="game-index-link" href="./game">Je m'entraîne !</a>
+    </div>
+    <div class="col-12 col-sm-6">
+      <a id="test-index-link" href="./game-form-gamesize"
+        >Je m'évalue !</a
+      >
+    </div>
+  </div>
+</div>

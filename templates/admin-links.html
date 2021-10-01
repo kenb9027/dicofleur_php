@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <?php
+      if (isset($_SESSION['user']) && !empty($_SESSION['user']) ) { ?>
+    <div class="col-12 col-sm-6 col-md-4 admin-link-box">
+      <a class="admin-link" href="./add-a-user">Ajouter un administrateur</a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 admin-link-box">
+      <a class="admin-link" href="./add-a-plant">Ajouter un végétal</a>
+    </div>
+    <?php }; ?>
+
+    <?php
+      if (!isset($_SESSION['user']) || empty($_SESSION['user']) ) { ?>
+    <div class="col-12 admin-link-box">
+      <a class="admin-link" href="./login">Connexion</a>
+    </div>
+    <?php }; ?>
+
+    <?php
+      if (isset($_SESSION['user']) && !empty($_SESSION['user']) ) { ?>
+    <div class="col-12 col-sm-6 col-md-4 admin-link-box">
+      <a class="admin-link" href="./logout">Se Déconnecter</a>
+    </div>
+    <?php }; ?>
+
+  </div>
+</div>

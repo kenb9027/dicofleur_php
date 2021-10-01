@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="game-size-box">
+    <div class="row">
+      <div class="col-12">
+        <div class="game-size-title-box">
+          <h6 class="game-size-title">
+            Choisissez combien de végétaux afficher :
+          </h6>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="game-size-form-box">
+          <form action="./game" method="get">
+            <div class="row">
+              <div class="col-12 col-sm-6 game-size-input-box">
+                <input
+                  type="number"
+                  name="game-size"
+                  id="game-size"
+                  min="1"
+                  max="800"
+                />
+              </div>
+              <div class="col-12 col-sm-6 game-size-input-box">
+                <input type="submit" value="Recharger" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <?php 
+
+         
+         for ($i=0; $i < $size; $i++) { 
+            $plant = $plants[$i] ;
+            require('./templates/game-card.html');
+
+        }
+         ?>
+  </div>
+</div>

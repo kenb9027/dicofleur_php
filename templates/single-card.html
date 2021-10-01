@@ -1,0 +1,94 @@
+<div id="single-card" class="container">
+  <h4 class="single-title"><?php echo ucfirst($plant['name']) ?></h4>
+  <div class="row">
+    <div class="single-left-box col-12 col-lg-6">
+      <?php $plantImg = $plant['picture'] ;?>
+      <div
+        class="single-img"
+        style="
+          background: url('./public/img/<?= $plantImg ?>');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+      <?php
+      if (isset($_SESSION['user']) && !empty($_SESSION['user']) ) { ?>
+      <div class="admin-part">
+        <div class="row">
+          <div class="col-6 admin-link-box">
+            <a class="admin-link" href="./update-a-plant?id=<?= $plant['id'] ?>"
+              >Modifier</a
+            >
+          </div>
+          <div class="col-6 admin-link-box">
+            <a
+              class="admin-link admin-link-del"
+              href="./del-a-plant?id=<?= $plant['id'] ?>"
+              >Supprimer</a
+            >
+          </div>
+        </div>
+      </div>
+      <?php }; ?>
+    </div>
+
+    <div class="single-right-box col-12 col-lg-6">
+      <div class="single-infos-names">
+        <div class="row">
+          <p class="col-3 single-label">Nom</p>
+          <p class="col-9 single-name"><?php echo ucfirst($plant['name']) ?></p>
+        </div>
+        <div class="row">
+          <p class="col-3 single-label">Espèce</p>
+          <p class="col-9 single-name">
+            <?php echo ucfirst($plant['specie']) ?>
+          </p>
+        </div>
+        <div class="row">
+          <p class="col-3 single-label">Famille</p>
+          <p class="col-9 single-name">
+            <?php echo ucfirst($plant['family']) ?>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="single-desc-box row">
+    <p class="col-12 single-label-desc">Description:</p>
+  </div>
+</div>
+<div class="container">
+  <div class="single-desc-box row">
+    <p class="col-12 single-desc">
+      <?php echo ucfirst($plant['description']) ?>
+    </p>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="single-link-box col-6">
+      <?php if($previousPlant !== null ){ ?>
+
+      <a href="./single?id=<?= $previousPlant['id'] ?>"
+        >⬅
+        <?= $previousPlant['name'] ?></a
+      >
+      <?php }; ?>
+    </div>
+    <div class="single-link-box col-6">
+      <?php if($nextPlant !== null ){ ?>
+
+      <a href="./single?id=<?= $nextPlant['id'] ?>"
+        ><?= $nextPlant['name'] ?>
+        ➡</a
+      >
+      <?php }; ?>
+    </div>
+  </div>
+</div>

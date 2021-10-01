@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="game-title-box">
+    <h2 class="game-title">Prêt pour l'évaluation ?</h2>
+  </div>
+  <div class="game-size-box">
+    <div class="row">
+      <div class="col-12">
+        <h6 class="game-size-title">
+          Choisissez combien de végétaux afficher : entre 1 et <?= $maxSize ?>
+        </h6>
+
+      </div>
+      <form class="col-12" action="./game-form" method="get">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <input
+              type="number"
+              name="game-size"
+              id="game-size"
+              min="1"
+              max="800"
+            />
+          </div>
+          <div class="col-12 col-sm-6">
+            <input type="submit" value="Commencer !" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

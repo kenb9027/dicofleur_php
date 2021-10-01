@@ -1,0 +1,108 @@
+#pagination-box {
+  margin-top: 30px;
+
+  #pagination-prec-box {
+    text-align: right;
+    a {
+      padding: 5px;
+      color: var(--color-dark);
+      border-bottom: 2px solid transparent;
+      transition: border ease-in 0.3s;
+      &:hover {
+        border-bottom: 2px solid var(--color-dark);
+      }
+    }
+  }
+  #pagination-suiv-box {
+    text-align: left;
+    a {
+      padding: 5px;
+      color: var(--color-dark);
+      border-bottom: 2px solid transparent;
+      transition: border ease-in 0.3s;
+      &:hover {
+        border-bottom: 2px solid var(--color-dark);
+      }
+    }
+  }
+  #pagination-page-box {
+    text-align: center;
+  }
+  .page-links-dots {
+    color: var(--color-dark);
+    padding: 5px;
+    margin: 5px;
+  }
+  .page-links {
+    padding: 10px;
+    margin: 5px;
+    color: var(--color-dark);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: border ease-in 0.3s;
+    @media screen and (max-width: 768px) {
+        padding: 5px;
+        margin: 0px;
+    }
+
+    &:hover {
+      border: solid 1px var(--color-mid);
+    }
+    &.page-links-active {
+      font-weight: bold;
+      border: 2px solid var(--color-dark);
+      &:hover {
+        border: solid 2px var(--color-dark);
+      }
+    }
+  }
+
+  #pagination-form-box {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #pagination-form-text {
+      font-size: 24px;
+      font-family: var(--ff-secondary);
+      color: var(--color-dark);
+      text-align: center;
+    }
+    form {
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      #limit {
+        border-radius: 8px;
+        border: 1px solid var(--color-mid);
+
+        font-family: var(--ff-secondary);
+        color: var(--color-dark);
+        text-align: center;
+        font-size: 18px;
+      }
+      #pagination-form-submit {
+        margin: 20px;
+        border-radius: 8px;
+        border: 1px solid var(--color-mid);
+        padding: 5px 40px ;
+        font-family: var(--ff-secondary);
+        color: var(--color-dark);
+        text-align: center;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+
+        &:hover{
+            background-color: var(--color-dark);
+            color: #fff;
+        }
+      }
+    }
+  }
+}

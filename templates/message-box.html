@@ -1,0 +1,19 @@
+<?php 
+require_once('./src/models/messages.php') ;
+if ( isset($_GET['msg']) && !empty($_GET['msg'])){
+    $msg = $_GET['msg'];
+    $alert = getInfosMessage($msg);
+
+    echo '
+    <div id="message-box">
+
+        <span class="message message-' . $alert["class"] .' >">
+            '. ucfirst($alert["message"]) .'
+        </span>
+
+    </div>
+    ';
+}
+
+?>
+

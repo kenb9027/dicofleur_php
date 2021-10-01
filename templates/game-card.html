@@ -1,0 +1,18 @@
+<div class="col-12 col-sm-6 col-md-4">
+  <?php $plantImg = $plant['picture'] ;?>
+  <div
+    class="game-card"
+    style="
+      background: url('./public/img/<?= $plantImg ?>');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <div class="game-card-names game-card-names-hover">
+      <span class="game-card-name"><?= $plant['name'] ?></span>
+      <span class="game-card-name"><?= $plant['specie'] ?></span>
+      <span class="game-card-name"><?= $plant['family'] ?></span>
+    </div>
+  </div>
+</div>

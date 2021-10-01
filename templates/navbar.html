@@ -1,0 +1,51 @@
+<nav id="navbar">
+        <div id="navbar-titlebox">
+            <a href="./index">
+                <h1 id="navbar-title">DicoFleur</h1>
+            </a>
+            <div class="usernamebox">
+            <?php        
+                if (isset($_SESSION['user']) && !empty($_SESSION['user']) ) {
+                    echo '<h5 class="hello-user" >Bonjour '. $_SESSION['user']['name'] .' !</h5>' ;
+                };
+            ?>
+            </div>
+        </div>
+        <ul id="desktop-menu">
+            <li class="navbar-menu-item"><a href="./index">Accueil</a></li>
+            <li class="navbar-menu-item"><a href="./game">Je m'entraîne</a></li>
+            <li class="navbar-menu-item"><a href="./game-form-gamesize">Evaluation</a></li>
+            <li class="navbar-menu-item"><a href="./list">Les végétaux</a></li>
+            <li class="navbar-menu-item navbar-filter-item">
+                <a href="./filter">
+                    🔍
+                </a>
+            </li>
+            <?php        
+                if (isset($_SESSION['user']) && !empty($_SESSION['user']) ) {
+            ?>
+            <li class="navbar-menu-item"><a href="./adminpage">Admin.</a></li>
+            <?php
+                };
+            ?>
+
+        </ul>
+
+        <div class="burger-container" onclick="moveBurger(this)">
+            <div class="burger-bar1"></div>
+            <div class="burger-bar2"></div>
+            <div class="burger-bar3"></div>
+        </div>
+</nav>
+
+<div id="menu-side">
+    <ul id="navbar-menu">
+        <li class="navbar-menu-item"><a href="./index">Accueil</a></li>
+        <li class="navbar-menu-item"><a href="./game">Je m'entraîne</a></li>
+        <li class="navbar-menu-item"><a href="./game-form-gamesize">Je passe l'évaluation</a></li>
+        <li class="navbar-menu-item"><a href="./list">Les végétaux</a></li>
+        <li class="navbar-menu-item"><a href="./filter">Faire une recherche</a></li>
+
+
+    </ul>
+</div>

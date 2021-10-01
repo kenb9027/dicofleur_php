@@ -1,0 +1,53 @@
+<div class="lastplants-box container-fluid">
+    
+    <div id="carousel-lastplants" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <div class="carousel-inner">
+        <?php 
+        $first = true ;
+        foreach($cards as $card){
+
+            if ($first === true){
+                $active = "active";
+            }
+            else{
+                $active = "" ;
+            }
+
+            $plant = $card ;
+            echo '<div class="carousel-item '.$active.'">';
+            include('./templates/last-list-card.html');
+            echo '</div>';
+            $first = false;
+        };
+        if (count($cards) === 0){
+            include('./templates/no-results.html');
+        }
+        ?>
+
+    </div>
+    <a
+        class="carousel-control-prev"
+        href="#carousel-lastplants"
+        role="button"
+        data-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a
+        class="carousel-control-next"
+        href="#carousel-lastplants"
+        role="button"
+        data-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+
+    <div class="listlink-box">
+    <a href="./list">Consultez la liste complète <span>▶▶</span></a>
+    <a href="./filter">Faire une recherche <span>▶▶</span></a>
+    </div>
+
+</div>

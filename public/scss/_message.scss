@@ -1,0 +1,38 @@
+#message-box {
+  position: fixed;
+  top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 90;
+  margin: 0 auto;
+
+  opacity: 1;
+  animation: messagegoback 1.5s ease-out 5s 1 normal forwards;
+  .message {
+    width: 100%;
+    padding: 15px 8px;
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    text-align: center;
+  }
+  .message-warning {
+    background-color: var(--color-alt-mid);
+    color: #fff;
+  }
+  .message-success {
+    background-color: var(--color-mid);
+    color: #fff;
+  }
+}
+
+@keyframes messagegoback {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

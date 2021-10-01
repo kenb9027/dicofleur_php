@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="form-title">Ajouter un végétal ?</h1>
+  <form
+    id="addform"
+    action="./src/controllers/addplant.php"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <div class="addformgroup">
+      <label for="name">Nom commun</label>
+      <input type="text" id="name" name="name" />
+    </div>
+    <div class="addformgroup">
+      <label for="specie">Espèce</label>
+      <input type="text" id="specie" name="specie" />
+    </div>
+    <div class="addformgroup">
+      <label for="family">Famille</label>
+      <input type="text" id="family" name="family" />
+    </div>
+    <div class="addformgroup">
+      <label for="description">Description</label>
+      <textarea
+        type="text"
+        id="description"
+        name="description"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+    <div class="addformgroup">
+      <label class="add-lab-img" for="picture">Image</label>
+      <input type="file" id="picture" name="picture" />
+    </div>
+    <input type="submit" value="Ajouter" />
+  </form>
+</div>

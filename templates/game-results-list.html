@@ -1,0 +1,21 @@
+<div class="results-list">
+  <div class="row">
+    <?php
+    $results = $_SESSION['results'];
+    foreach ($results as $result){
+        $plant = $result['plant'];
+        $plantId = $plant['id'];
+        $plantImg = $plant['picture'];
+        $plantName = $plant['name'];
+        $plantSpecie = $plant['specie'];
+        $plantFamily = $plant['family'];
+        $resName = $result['name'];;
+        $resSpecie = $result['specie'];
+        $resFamily = $result['family'];
+        
+        include('./templates/game-results-card.html');
+        
+    }
+    ?>
+  </div>
+</div>

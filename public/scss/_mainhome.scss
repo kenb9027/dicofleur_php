@@ -1,0 +1,295 @@
+#welcome-box {
+  min-height: 80vh;
+
+  background-color: #fff;
+
+  padding: 0;
+  margin-bottom: 3vh;
+
+  #welcome-img {
+    background-image: url(../img/un_flower-9.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .welcome-titles-box {
+      background-color: var(--color-dark-07);
+      border-radius: 15px;
+      padding: 35px;
+      @media screen and (max-width: 576px) {
+        padding: 12px;
+        width: 100%;
+        border-radius: 0;
+      }
+
+      h2,
+      h4 {
+        font-family: var(--ff-primary);
+        text-align: center;
+        color: #fff;
+
+        opacity: 0;
+        animation: maintitles 0.6s 0.2s ease-in forwards;
+      }
+      @keyframes maintitles {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        font-size: 35px;
+        font-weight: bold;
+        @media screen and (max-width: 576px) {
+          font-size: 32px;
+        }
+      }
+      h4 {
+        font-size: 20px;
+        font-style: italic;
+        @media screen and (max-width: 576px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  #welcome-img.admin-welcome-img {
+    background-image: url(../img/default.jpg);
+  }
+  #welcome-img.game-welcome-img {
+    background-image: url(../img/un_flower-2.jpg);
+  }
+  #welcome-img.contact-welcome-img {
+    background-image: url(../img/un_flower-3.jpg);
+  }
+    #welcome-img.filter-welcome-img {
+    background-image: url(../img/un_flower-6.jpg);
+  }
+  #welcome-img.list-welcome-img {
+    background-image: url(../img/un_flower-7.jpg);
+  }
+}
+#homeImgBox {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+
+  #homeImgLeft {
+    background-image: url(../img/un_flower-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60%;
+    width: 40%;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px var(--color-dark-07);
+
+    position: absolute;
+    top: 15%;
+    left: 5%;
+
+  }
+
+  #homeImgRight {
+    background-image: url(../img/un_flower-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60%;
+    width: 40%;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 9px var(--color-dark-07);
+
+    position: absolute;
+    top: 15%;
+    right: 5%;
+
+  }
+}
+
+#home-title-box {
+  margin: 30px auto;
+  width: 70%;
+
+  #home-title-top {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--ff-secondary);
+    color: var(--color-dark);
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #home-title-middle {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--ff-secondary);
+    color: var(--color-dark);
+    font-size: 30px;
+    font-style: italic;
+  }
+  #home-title-bottom {
+    text-align: center;
+    padding: 20px;
+    font-family: var(--ff-secondary);
+    color: var(--color-dark);
+    font-size: 30px;
+    font-style: italic;
+  }
+}
+
+.lastplants-box {
+  margin-top: 80px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  padding: 0;
+  .lastplants-title {
+    font-family: var(--ff-secondary);
+    color: var(--color-dark);
+    text-align: left;
+    font-size: 25px;
+    margin: 40px ;
+  }
+  
+}
+.listlink-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  margin-top: 45px;
+  font-family: var(--ff-secondary);
+  color: var(--color-dark) !important;
+
+  font-size: 20px;
+  font-weight: bold;
+  a {
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    transition: border 0.4s ease-in-out;
+    padding: 5px 15px;
+    color: var(--color-dark) !important;
+    &:hover {
+      border-bottom: 2px solid var(--color-dark);
+    }
+    &:visited,
+    &:focus,
+    &:focus-visible {
+      color: var(--color-dark) !important;
+    }
+    span {
+      margin-left: 15px;
+    }
+  }
+}
+
+#carousel-lastplants {
+  .card {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0px;
+    .card-last-title-box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 1;
+      .card-last-title {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-family: var(--ff-primary);
+        font-weight: bold;
+        color: #fff;
+        background-color: var(--color-dark-07);
+        font-size: 32px;
+        margin: 0;
+      }
+    }
+  }
+}
+#game-index-box {
+  padding: 10px;
+}
+#game-index-title {
+  text-align: left;
+  padding: 20px;
+  font-family: var(--ff-secondary);
+  color: var(--color-dark);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#test-index-title {
+  text-align: center;
+  padding: 20px;
+  font-family: var(--ff-secondary);
+  color: var(--color-dark);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+}
+#test-index-box {
+  margin: 30px;
+
+  div{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+#game-index-link {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--ff-primary);
+  color: #fff;
+  background-color: var(--color-past);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid (var(--color-dark));
+  box-shadow: 0 0 9px var(--color-dark-07);
+
+  transition: all ease-in 0.3s;
+  &:hover {
+    background-color: var(--color-dark);
+  }
+}
+#test-index-link {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--ff-primary);
+  color: #fff;
+  background-color: var(--color-alt-mid);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid (var(--color-alt-dark));
+  box-shadow: 0 0 9px var(--color-alt-dark-07);
+
+  transition: all ease-in 0.3s;
+  &:hover {
+    background-color: var(--color-alt-dark);
+  }
+}

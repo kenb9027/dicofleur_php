@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <?php foreach($cards as $card){
+
+            $plant = $card ;
+            include('./templates/card.html');
+        };
+        if (count($cards) === 0){
+            include('./templates/no-results.html');
+
+        }
+        ?>
+  </div>
+</div>
